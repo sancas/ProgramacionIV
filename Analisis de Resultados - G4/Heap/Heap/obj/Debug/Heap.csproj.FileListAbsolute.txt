@@ -1,0 +1,9 @@
+c:\users\usuario.usuario-pc\documents\visual studio 2012\Projects\Heap\Heap\bin\Debug\Heap.exe.config
+c:\users\usuario.usuario-pc\documents\visual studio 2012\Projects\Heap\Heap\bin\Debug\Heap.exe
+c:\users\usuario.usuario-pc\documents\visual studio 2012\Projects\Heap\Heap\bin\Debug\Heap.pdb
+c:\users\usuario.usuario-pc\documents\visual studio 2012\Projects\Heap\Heap\obj\Debug\Heap.csprojResolveAssemblyReference.cache
+c:\users\usuario.usuario-pc\documents\visual studio 2012\Projects\Heap\Heap\obj\Debug\Heap.exe
+c:\users\usuario.usuario-pc\documents\visual studio 2012\Projects\Heap\Heap\obj\Debug\Heap.pdb
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\Heap\Heap\bin\Debug\Heap.exe.config
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\Heap\Heap\obj\Debug\Heap.exe
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\Heap\Heap\obj\Debug\Heap.pdb

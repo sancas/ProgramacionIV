@@ -1,0 +1,11 @@
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G5\MetodosDeOrdenamiento\MetodosDeOrdenamiento\bin\Debug\MetodosDeOrdenamiento.exe.config
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G5\MetodosDeOrdenamiento\MetodosDeOrdenamiento\bin\Debug\MetodosDeOrdenamiento.exe
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G5\MetodosDeOrdenamiento\MetodosDeOrdenamiento\bin\Debug\MetodosDeOrdenamiento.pdb
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G5\MetodosDeOrdenamiento\MetodosDeOrdenamiento\obj\Debug\MetodosDeOrdenamiento.csprojResolveAssemblyReference.cache
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G5\MetodosDeOrdenamiento\MetodosDeOrdenamiento\obj\Debug\MetodosDeOrdenamiento.frmPrincipal.resources
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G5\MetodosDeOrdenamiento\MetodosDeOrdenamiento\obj\Debug\MetodosDeOrdenamiento.Properties.Resources.resources
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G5\MetodosDeOrdenamiento\MetodosDeOrdenamiento\obj\Debug\MetodosDeOrdenamiento.csproj.GenerateResource.Cache
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G5\MetodosDeOrdenamiento\MetodosDeOrdenamiento\obj\Debug\MetodosDeOrdenamiento.exe
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G5\MetodosDeOrdenamiento\MetodosDeOrdenamiento\obj\Debug\MetodosDeOrdenamiento.pdb
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G5\MetodosDeOrdenamiento\MetodosDeOrdenamiento\obj\Debug\MetodosDeOrdenamiento.frmBubbleSort.resources
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G5\MetodosDeOrdenamiento\MetodosDeOrdenamiento\obj\Debug\MetodosDeOrdenamiento.frmShellSort.resources

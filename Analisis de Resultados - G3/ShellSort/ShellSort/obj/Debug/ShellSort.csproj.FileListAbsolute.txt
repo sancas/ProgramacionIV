@@ -1,0 +1,6 @@
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G3\ShellSort\ShellSort\bin\Debug\ShellSort.exe.config
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G3\ShellSort\ShellSort\bin\Debug\ShellSort.exe
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G3\ShellSort\ShellSort\bin\Debug\ShellSort.pdb
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G3\ShellSort\ShellSort\obj\Debug\ShellSort.csprojResolveAssemblyReference.cache
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G3\ShellSort\ShellSort\obj\Debug\ShellSort.exe
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G3\ShellSort\ShellSort\obj\Debug\ShellSort.pdb

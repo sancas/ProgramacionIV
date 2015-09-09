@@ -1,0 +1,9 @@
+c:\users\kevinferman\documents\visual studio 2012\Projects\QuickSort\QuickSort\bin\Debug\QuickSort.exe.config
+c:\users\kevinferman\documents\visual studio 2012\Projects\QuickSort\QuickSort\bin\Debug\QuickSort.exe
+c:\users\kevinferman\documents\visual studio 2012\Projects\QuickSort\QuickSort\bin\Debug\QuickSort.pdb
+c:\users\kevinferman\documents\visual studio 2012\Projects\QuickSort\QuickSort\obj\Debug\QuickSort.csprojResolveAssemblyReference.cache
+c:\users\kevinferman\documents\visual studio 2012\Projects\QuickSort\QuickSort\obj\Debug\QuickSort.exe
+c:\users\kevinferman\documents\visual studio 2012\Projects\QuickSort\QuickSort\obj\Debug\QuickSort.pdb
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G3\QuickSort\QuickSort\bin\Debug\QuickSort.exe.config
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G3\QuickSort\QuickSort\obj\Debug\QuickSort.exe
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G3\QuickSort\QuickSort\obj\Debug\QuickSort.pdb

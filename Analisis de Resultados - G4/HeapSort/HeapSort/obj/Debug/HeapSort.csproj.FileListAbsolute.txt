@@ -1,0 +1,36 @@
+c:\users\usuario.usuario-pc\documents\visual studio 2012\Projects\HeapSort\HeapSort\bin\Debug\HeapSort.exe.config
+c:\users\usuario.usuario-pc\documents\visual studio 2012\Projects\HeapSort\HeapSort\obj\Debug\HeapSort.Properties.Resources.resources
+c:\users\usuario.usuario-pc\documents\visual studio 2012\Projects\HeapSort\HeapSort\obj\Debug\HeapSort.csproj.GenerateResource.Cache
+c:\users\usuario.usuario-pc\documents\visual studio 2012\Projects\HeapSort\HeapSort\bin\Debug\HeapSort.exe
+c:\users\usuario.usuario-pc\documents\visual studio 2012\Projects\HeapSort\HeapSort\bin\Debug\HeapSort.pdb
+c:\users\usuario.usuario-pc\documents\visual studio 2012\Projects\HeapSort\HeapSort\obj\Debug\HeapSort.exe
+c:\users\usuario.usuario-pc\documents\visual studio 2012\Projects\HeapSort\HeapSort\obj\Debug\HeapSort.pdb
+c:\users\usuario.usuario-pc\documents\visual studio 2012\Projects\HeapSort\HeapSort\obj\Debug\HeapSort.frmHome.resources
+c:\users\usuario.usuario-pc\documents\visual studio 2012\Projects\HeapSort\HeapSort\obj\Debug\HeapSort.csprojResolveAssemblyReference.cache
+F:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\bin\Debug\HeapSort.exe.config
+F:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\obj\Debug\HeapSort.exe
+F:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\obj\Debug\HeapSort.pdb
+F:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\bin\Debug\HeapSort.exe
+F:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\bin\Debug\HeapSort.pdb
+F:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\obj\Debug\HeapSort.csprojResolveAssemblyReference.cache
+F:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\obj\Debug\HeapSort.frmHome.resources
+F:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\obj\Debug\HeapSort.Properties.Resources.resources
+F:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\obj\Debug\HeapSort.csproj.GenerateResource.Cache
+E:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\bin\Debug\HeapSort.exe.config
+E:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\obj\Debug\HeapSort.exe
+E:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\obj\Debug\HeapSort.pdb
+E:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\bin\Debug\HeapSort.exe
+E:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\bin\Debug\HeapSort.pdb
+E:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\obj\Debug\HeapSort.csprojResolveAssemblyReference.cache
+E:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\obj\Debug\HeapSort.frmHome.resources
+E:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\obj\Debug\HeapSort.Properties.Resources.resources
+E:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\obj\Debug\HeapSort.csproj.GenerateResource.Cache
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\bin\Debug\HeapSort.exe.config
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\obj\Debug\HeapSort.exe
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\obj\Debug\HeapSort.pdb
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\bin\Debug\HeapSort.exe
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\bin\Debug\HeapSort.pdb
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\obj\Debug\HeapSort.csprojResolveAssemblyReference.cache
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\obj\Debug\HeapSort.frmHome.resources
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\obj\Debug\HeapSort.Properties.Resources.resources
+G:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G4\HeapSort\HeapSort\obj\Debug\HeapSort.csproj.GenerateResource.Cache
