@@ -18,3 +18,12 @@ J:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G6
 J:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G6\Arbol Binario\Arbol Binario\obj\Debug\Arbol_Binario.frmPrincipal.resources
 J:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G6\Arbol Binario\Arbol Binario\obj\Debug\Arbol_Binario.Properties.Resources.resources
 J:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G6\Arbol Binario\Arbol Binario\obj\Debug\Arbol Binario.csproj.GenerateResource.Cache
+J:\Documents\Universidad\ProgramacionIV\Analisis de Resultados - G6\Arbol Binario\Arbol Binario\bin\Debug\Arbol Binario.exe.config
+J:\Documents\Universidad\ProgramacionIV\Analisis de Resultados - G6\Arbol Binario\Arbol Binario\obj\Debug\Arbol Binario.exe
+J:\Documents\Universidad\ProgramacionIV\Analisis de Resultados - G6\Arbol Binario\Arbol Binario\obj\Debug\Arbol Binario.pdb
+J:\Documents\Universidad\ProgramacionIV\Analisis de Resultados - G6\Arbol Binario\Arbol Binario\bin\Debug\Arbol Binario.exe
+J:\Documents\Universidad\ProgramacionIV\Analisis de Resultados - G6\Arbol Binario\Arbol Binario\bin\Debug\Arbol Binario.pdb
+J:\Documents\Universidad\ProgramacionIV\Analisis de Resultados - G6\Arbol Binario\Arbol Binario\obj\Debug\Arbol Binario.csprojResolveAssemblyReference.cache
+J:\Documents\Universidad\ProgramacionIV\Analisis de Resultados - G6\Arbol Binario\Arbol Binario\obj\Debug\Arbol_Binario.frmPrincipal.resources
+J:\Documents\Universidad\ProgramacionIV\Analisis de Resultados - G6\Arbol Binario\Arbol Binario\obj\Debug\Arbol_Binario.Properties.Resources.resources
+J:\Documents\Universidad\ProgramacionIV\Analisis de Resultados - G6\Arbol Binario\Arbol Binario\obj\Debug\Arbol Binario.csproj.GenerateResource.Cache

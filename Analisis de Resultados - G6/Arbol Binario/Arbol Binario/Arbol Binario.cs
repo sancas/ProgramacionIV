@@ -170,7 +170,7 @@ namespace Arbol_Binario
             }
         }
 
-        //Funcion para calcular que nodo se ha tocado con el mouse
+        //Funcion para calcular que nodo se ha tocado con el mouse y resaltarlo, regresa el valor del nodo
         public int seleccionar(Graphics grafo, Font fuente, Brush RellenoFuente, Pen Lapiz, Nodo_Arbol Raiz, Point Referencia)
         {
             Nodo_Arbol actual = Raiz;
@@ -190,6 +190,30 @@ namespace Arbol_Binario
                 else if (diferenciaX < 0) actual = actual.Izquierdo;
             }
             return 100;
+        }
+
+        /*
+         * 
+         * Funciones para la sumataria de valores del arbol
+         * 
+         * */
+        //Funcion que suma los valores del arbol con un modulo especifico
+        public void sumar(Graphics grafo, Font fuente, Brush Relleno, Brush RellenoFuente,
+    Pen Lapiz, Nodo_Arbol Raiz, int modulo)
+        {
+            Nodo_Arbol actual = Raiz;
+            Brush entorno = Brushes.Red;
+            frmPrincipal myForm = new frmPrincipal();
+
+            if (Raiz != null)
+            {
+                sumar(grafo, fuente, Relleno, RellenoFuente, Lapiz, Raiz.Izquierdo, modulo);
+                if(Raiz.info%modulo == 0)
+                {
+                    Raiz.colorear(grafo, fuente, entorno, RellenoFuente, Lapiz);
+                }
+                sumar(grafo, fuente, Relleno, RellenoFuente, Lapiz, Raiz.Derecho, modulo);
+            }
         }
     }
 }

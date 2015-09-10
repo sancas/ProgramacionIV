@@ -18,6 +18,15 @@ namespace Arbol_Binario
             InitializeComponent();
         }
 
+        //Desmarcador
+        protected void desmarcarRadioButtons()
+        {
+            rbtnTotal.Checked = false;
+            rbtnMultiplosDos.Checked = false;
+            rbtnMultiplosTres.Checked = false;
+            rbtnMultiplosCinco.Checked = false;
+        }
+
         //Deshabilitadores y Habilitadores
         protected void habilitarButtons()
         {
@@ -50,6 +59,7 @@ namespace Arbol_Binario
         //Declaracion de variables a utilizar
         int Dato = 0;
         int cont = 0;
+        int suma = 0, suma2 = 0, suma3 = 0, suma5 = 0;
 
         Arbol_Binario myTree = new Arbol_Binario(null); //Creacion del objeto Arbol
         Graphics g;                                     //Definicion del objeto grafico
@@ -73,11 +83,25 @@ namespace Arbol_Binario
             txtNumero.Focus();
 
             cont++;
+            suma += Dato;
+            if(Dato%2 == 0)
+            {
+                suma2 += Dato;
+            }
+            if(Dato%3 == 0)
+            {
+                suma3 += Dato;
+            }
+            if(Dato%5 == 0)
+            {
+                suma5 += Dato;
+            }
 
             lblAltura.Text = "Altura: " + myTree.calcularAltura(myTree.Raiz);
             lblAltura.Visible = true;
             habilitarButtons();
             habilitarRadioButtons();
+            desmarcarRadioButtons();
             Refresh();
         }
 
@@ -89,13 +113,27 @@ namespace Arbol_Binario
             txtNumero.Focus();
 
             cont--;
+            suma -= Dato;
+            if (Dato%2 == 0)
+            {
+                suma2 -= Dato;
+            }
+            if (Dato%3 == 0)
+            {
+                suma3 -= Dato;
+            }
+            if (Dato%5 == 0)
+            {
+                suma5 -= Dato;
+            }
 
-            if(cont == 0)
+            if (cont == 0)
             {
                 deshabilitarButtons();
                 deshabilitarRadioButtons();
                 lblAltura.Visible = false;
             }
+            desmarcarRadioButtons();
             Refresh();
         }
 
@@ -155,12 +193,14 @@ namespace Arbol_Binario
                 e.Handled = true;
                 return;
             }
+            desmarcarRadioButtons();
         }
 
         private void btnInOrden_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
             Refresh();
+            desmarcarRadioButtons();
             txtNumero.Clear();
             deshabilitarButtons();
             deshabilitarRadioButtons();
@@ -175,6 +215,7 @@ namespace Arbol_Binario
         {
             this.Cursor = Cursors.WaitCursor;
             Refresh();
+            desmarcarRadioButtons();
             txtNumero.Clear();
             deshabilitarButtons();
             deshabilitarRadioButtons();
@@ -189,6 +230,7 @@ namespace Arbol_Binario
         {
             this.Cursor = Cursors.WaitCursor;
             Refresh();
+            desmarcarRadioButtons();
             txtNumero.Clear();
             deshabilitarButtons();
             deshabilitarRadioButtons();
@@ -210,6 +252,66 @@ namespace Arbol_Binario
             {
                 txtNumero.Text = valor.ToString();
             }
+        }
+
+        private void rbtnTotal_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtnTotal.Checked)
+            {
+                Refresh();
+                txtNumero.Clear();
+                g = this.CreateGraphics();
+                myTree.sumar(g, this.Font, Brushes.Blue, Brushes.White, Pens.Black, myTree.Raiz, 1);
+                lblSumatoria.Visible = true;
+                lblSumatoria.Text = "Suma: " + suma.ToString();
+            }
+            else
+                lblSumatoria.Visible = false;
+        }
+
+        private void rbtnMultiplosDos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtnMultiplosDos.Checked)
+            {
+                Refresh();
+                txtNumero.Clear();
+                g = this.CreateGraphics();
+                myTree.sumar(g, this.Font, Brushes.Blue, Brushes.White, Pens.Black, myTree.Raiz, 2);
+                lblSumatoria.Visible = true;
+                lblSumatoria.Text = "Suma: " + suma2.ToString();
+            }
+            else
+                lblSumatoria.Visible = false;
+        }
+
+        private void rbtnMultiplosTres_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtnMultiplosTres.Checked)
+            {
+                Refresh();
+                txtNumero.Clear();
+                g = this.CreateGraphics();
+                myTree.sumar(g, this.Font, Brushes.Blue, Brushes.White, Pens.Black, myTree.Raiz, 3);
+                lblSumatoria.Visible = true;
+                lblSumatoria.Text = "Suma: " + suma3.ToString();
+            }
+            else
+                lblSumatoria.Visible = false;
+        }
+
+        private void rbtnMultiplosCinco_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtnMultiplosCinco.Checked)
+            {
+                Refresh();
+                txtNumero.Clear();
+                g = this.CreateGraphics();
+                myTree.sumar(g, this.Font, Brushes.Blue, Brushes.White, Pens.Black, myTree.Raiz, 5);
+                lblSumatoria.Visible = true;
+                lblSumatoria.Text = "Suma: " + suma5.ToString();
+            }
+            else
+                lblSumatoria.Visible = false;
         }
     }
 }

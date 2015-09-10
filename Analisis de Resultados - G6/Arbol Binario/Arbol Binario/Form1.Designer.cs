@@ -31,18 +31,19 @@
             this.btnAddNode = new System.Windows.Forms.Button();
             this.btnDelNode = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblSumas = new System.Windows.Forms.Label();
+            this.lblSumatoria = new System.Windows.Forms.Label();
+            this.rbtnMultiplosCinco = new System.Windows.Forms.RadioButton();
+            this.rbtnMultiplosTres = new System.Windows.Forms.RadioButton();
+            this.rbtnMultiplosDos = new System.Windows.Forms.RadioButton();
+            this.rbtnTotal = new System.Windows.Forms.RadioButton();
+            this.lblAltura = new System.Windows.Forms.Label();
             this.btnPreOrden = new System.Windows.Forms.Button();
             this.lblRecorridos = new System.Windows.Forms.Label();
             this.btnPostOrden = new System.Windows.Forms.Button();
             this.btnInOrden = new System.Windows.Forms.Button();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.lblValor = new System.Windows.Forms.Label();
-            this.lblSumatorias = new System.Windows.Forms.Label();
-            this.rbtnTotal = new System.Windows.Forms.RadioButton();
-            this.rbtnMultiplosDos = new System.Windows.Forms.RadioButton();
-            this.rbtnMultiplosTres = new System.Windows.Forms.RadioButton();
-            this.rbtnMultiplosCinco = new System.Windows.Forms.RadioButton();
-            this.lblAltura = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,12 +73,13 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lblAltura);
+            this.groupBox1.Controls.Add(this.lblSumas);
+            this.groupBox1.Controls.Add(this.lblSumatoria);
             this.groupBox1.Controls.Add(this.rbtnMultiplosCinco);
             this.groupBox1.Controls.Add(this.rbtnMultiplosTres);
             this.groupBox1.Controls.Add(this.rbtnMultiplosDos);
             this.groupBox1.Controls.Add(this.rbtnTotal);
-            this.groupBox1.Controls.Add(this.lblSumatorias);
+            this.groupBox1.Controls.Add(this.lblAltura);
             this.groupBox1.Controls.Add(this.btnPreOrden);
             this.groupBox1.Controls.Add(this.lblRecorridos);
             this.groupBox1.Controls.Add(this.btnPostOrden);
@@ -94,6 +96,94 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Opciones";
+            // 
+            // lblSumas
+            // 
+            this.lblSumas.AutoSize = true;
+            this.lblSumas.Location = new System.Drawing.Point(12, 304);
+            this.lblSumas.Name = "lblSumas";
+            this.lblSumas.Size = new System.Drawing.Size(63, 20);
+            this.lblSumas.TabIndex = 4;
+            this.lblSumas.Text = "Sumas:";
+            // 
+            // lblSumatoria
+            // 
+            this.lblSumatoria.AutoSize = true;
+            this.lblSumatoria.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblSumatoria.Location = new System.Drawing.Point(3, 484);
+            this.lblSumatoria.Name = "lblSumatoria";
+            this.lblSumatoria.Size = new System.Drawing.Size(86, 20);
+            this.lblSumatoria.TabIndex = 14;
+            this.lblSumatoria.Text = "Sumatoria:";
+            this.lblSumatoria.Visible = false;
+            // 
+            // rbtnMultiplosCinco
+            // 
+            this.rbtnMultiplosCinco.AutoSize = true;
+            this.rbtnMultiplosCinco.Enabled = false;
+            this.rbtnMultiplosCinco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnMultiplosCinco.Location = new System.Drawing.Point(12, 417);
+            this.rbtnMultiplosCinco.Name = "rbtnMultiplosCinco";
+            this.rbtnMultiplosCinco.Size = new System.Drawing.Size(102, 24);
+            this.rbtnMultiplosCinco.TabIndex = 13;
+            this.rbtnMultiplosCinco.TabStop = true;
+            this.rbtnMultiplosCinco.Text = "Multiplos 5";
+            this.rbtnMultiplosCinco.UseVisualStyleBackColor = true;
+            this.rbtnMultiplosCinco.CheckedChanged += new System.EventHandler(this.rbtnMultiplosCinco_CheckedChanged);
+            // 
+            // rbtnMultiplosTres
+            // 
+            this.rbtnMultiplosTres.AutoSize = true;
+            this.rbtnMultiplosTres.Enabled = false;
+            this.rbtnMultiplosTres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnMultiplosTres.Location = new System.Drawing.Point(12, 387);
+            this.rbtnMultiplosTres.Name = "rbtnMultiplosTres";
+            this.rbtnMultiplosTres.Size = new System.Drawing.Size(102, 24);
+            this.rbtnMultiplosTres.TabIndex = 12;
+            this.rbtnMultiplosTres.TabStop = true;
+            this.rbtnMultiplosTres.Text = "Multiplos 3";
+            this.rbtnMultiplosTres.UseVisualStyleBackColor = true;
+            this.rbtnMultiplosTres.CheckedChanged += new System.EventHandler(this.rbtnMultiplosTres_CheckedChanged);
+            // 
+            // rbtnMultiplosDos
+            // 
+            this.rbtnMultiplosDos.AutoSize = true;
+            this.rbtnMultiplosDos.Enabled = false;
+            this.rbtnMultiplosDos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnMultiplosDos.Location = new System.Drawing.Point(12, 357);
+            this.rbtnMultiplosDos.Name = "rbtnMultiplosDos";
+            this.rbtnMultiplosDos.Size = new System.Drawing.Size(102, 24);
+            this.rbtnMultiplosDos.TabIndex = 11;
+            this.rbtnMultiplosDos.TabStop = true;
+            this.rbtnMultiplosDos.Text = "Multiplos 2";
+            this.rbtnMultiplosDos.UseVisualStyleBackColor = true;
+            this.rbtnMultiplosDos.CheckedChanged += new System.EventHandler(this.rbtnMultiplosDos_CheckedChanged);
+            // 
+            // rbtnTotal
+            // 
+            this.rbtnTotal.AutoSize = true;
+            this.rbtnTotal.Enabled = false;
+            this.rbtnTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnTotal.Location = new System.Drawing.Point(12, 327);
+            this.rbtnTotal.Name = "rbtnTotal";
+            this.rbtnTotal.Size = new System.Drawing.Size(62, 24);
+            this.rbtnTotal.TabIndex = 10;
+            this.rbtnTotal.TabStop = true;
+            this.rbtnTotal.Text = "Total";
+            this.rbtnTotal.UseVisualStyleBackColor = true;
+            this.rbtnTotal.CheckedChanged += new System.EventHandler(this.rbtnTotal_CheckedChanged);
+            // 
+            // lblAltura
+            // 
+            this.lblAltura.AutoSize = true;
+            this.lblAltura.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblAltura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAltura.Location = new System.Drawing.Point(3, 504);
+            this.lblAltura.Name = "lblAltura";
+            this.lblAltura.Size = new System.Drawing.Size(55, 20);
+            this.lblAltura.TabIndex = 9;
+            this.lblAltura.Text = "Altura:";
+            this.lblAltura.Visible = false;
             // 
             // btnPreOrden
             // 
@@ -158,79 +248,6 @@
             this.lblValor.TabIndex = 3;
             this.lblValor.Text = "Valor:";
             // 
-            // lblSumatorias
-            // 
-            this.lblSumatorias.AutoSize = true;
-            this.lblSumatorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSumatorias.Location = new System.Drawing.Point(12, 304);
-            this.lblSumatorias.Name = "lblSumatorias";
-            this.lblSumatorias.Size = new System.Drawing.Size(90, 20);
-            this.lblSumatorias.TabIndex = 9;
-            this.lblSumatorias.Text = "Sumatorias";
-            // 
-            // rbtnTotal
-            // 
-            this.rbtnTotal.AutoSize = true;
-            this.rbtnTotal.Enabled = false;
-            this.rbtnTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnTotal.Location = new System.Drawing.Point(12, 327);
-            this.rbtnTotal.Name = "rbtnTotal";
-            this.rbtnTotal.Size = new System.Drawing.Size(62, 24);
-            this.rbtnTotal.TabIndex = 10;
-            this.rbtnTotal.TabStop = true;
-            this.rbtnTotal.Text = "Total";
-            this.rbtnTotal.UseVisualStyleBackColor = true;
-            // 
-            // rbtnMultiplosDos
-            // 
-            this.rbtnMultiplosDos.AutoSize = true;
-            this.rbtnMultiplosDos.Enabled = false;
-            this.rbtnMultiplosDos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnMultiplosDos.Location = new System.Drawing.Point(12, 357);
-            this.rbtnMultiplosDos.Name = "rbtnMultiplosDos";
-            this.rbtnMultiplosDos.Size = new System.Drawing.Size(102, 24);
-            this.rbtnMultiplosDos.TabIndex = 11;
-            this.rbtnMultiplosDos.TabStop = true;
-            this.rbtnMultiplosDos.Text = "Multiplos 2";
-            this.rbtnMultiplosDos.UseVisualStyleBackColor = true;
-            // 
-            // rbtnMultiplosTres
-            // 
-            this.rbtnMultiplosTres.AutoSize = true;
-            this.rbtnMultiplosTres.Enabled = false;
-            this.rbtnMultiplosTres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnMultiplosTres.Location = new System.Drawing.Point(12, 387);
-            this.rbtnMultiplosTres.Name = "rbtnMultiplosTres";
-            this.rbtnMultiplosTres.Size = new System.Drawing.Size(102, 24);
-            this.rbtnMultiplosTres.TabIndex = 12;
-            this.rbtnMultiplosTres.TabStop = true;
-            this.rbtnMultiplosTres.Text = "Multiplos 3";
-            this.rbtnMultiplosTres.UseVisualStyleBackColor = true;
-            // 
-            // rbtnMultiplosCinco
-            // 
-            this.rbtnMultiplosCinco.AutoSize = true;
-            this.rbtnMultiplosCinco.Enabled = false;
-            this.rbtnMultiplosCinco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnMultiplosCinco.Location = new System.Drawing.Point(12, 417);
-            this.rbtnMultiplosCinco.Name = "rbtnMultiplosCinco";
-            this.rbtnMultiplosCinco.Size = new System.Drawing.Size(102, 24);
-            this.rbtnMultiplosCinco.TabIndex = 13;
-            this.rbtnMultiplosCinco.TabStop = true;
-            this.rbtnMultiplosCinco.Text = "Multiplos 5";
-            this.rbtnMultiplosCinco.UseVisualStyleBackColor = true;
-            // 
-            // lblAltura
-            // 
-            this.lblAltura.AutoSize = true;
-            this.lblAltura.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblAltura.Location = new System.Drawing.Point(3, 504);
-            this.lblAltura.Name = "lblAltura";
-            this.lblAltura.Size = new System.Drawing.Size(55, 20);
-            this.lblAltura.TabIndex = 14;
-            this.lblAltura.Text = "Altura:";
-            this.lblAltura.Visible = false;
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,12 +275,13 @@
         private System.Windows.Forms.Label lblRecorridos;
         private System.Windows.Forms.Button btnPostOrden;
         private System.Windows.Forms.Button btnInOrden;
-        private System.Windows.Forms.Label lblAltura;
+        private System.Windows.Forms.Label lblSumatoria;
         private System.Windows.Forms.RadioButton rbtnMultiplosCinco;
         private System.Windows.Forms.RadioButton rbtnMultiplosTres;
         private System.Windows.Forms.RadioButton rbtnMultiplosDos;
         private System.Windows.Forms.RadioButton rbtnTotal;
-        private System.Windows.Forms.Label lblSumatorias;
+        private System.Windows.Forms.Label lblAltura;
+        private System.Windows.Forms.Label lblSumas;
     }
 }
 
