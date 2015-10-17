@@ -20,7 +20,9 @@ namespace Grafos
         private int var_control = 0; // la utilizaremos para determinar el estado en la pizarra:
         // 0 -> sin acción, 1 -> Dibujando arco, 2 -> Nuevo vértice
         // variables para el control de ventanas modales
-        private Vertice ventanaVertice; // ventana para agregar los vértices
+        private Vertice ventanaVertice; // ventana para agregar los vértices
+        private Arco ventanaArco; // ventana para agregar los arcos
+
         public Simulador()
         {
             InitializeComponent();
@@ -28,6 +30,7 @@ namespace Grafos
             nuevoNodo = null;
             var_control = 0;
             ventanaVertice = new Vertice();
+            ventanaArco = new Arco();
 
             this.SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.DoubleBuffer, true);
         }
@@ -54,28 +57,8 @@ namespace Grafos
         {
             nuevoNodo = new CVertice();
             var_control = 2; // recordemos que es usado para indicar el estado en la pizarra: 0 ->
-            // sin accion, 1 -> Dibujando arco, 2 -> Nuevo vértice
-        }
+            // sin accion, 1 -> Dibujando arco, 2 -> Nuevo vértice
 
-        private void Pizarra_MouseUp(object sender, MouseEventArgs e)
-        {
-            switch (var_control)
-            {
-                case 1: // Dibujando arco
-                    if ((NodoDestino = grafo.DetectarPunto(e.Location)) != null && NodoOrigen != NodoDestino)
-                    {
-                        if (grafo.AgregarArco(NodoOrigen, NodoDestino)) //Se procede a crear la arista
-                        {
-                            int distancia = 0;
-                            NodoOrigen.ListaAdyacencia.Find(v => v.nDestino == NodoDestino).peso = distancia;
-                        }
-                    }
-                    var_control = 0;
-                    NodoOrigen = null;
-                    NodoDestino = null;
-                    Pizarra.Refresh();
-                    break;
-            }
         }
 
         private void Pizarra_MouseMove(object sender, MouseEventArgs e)
@@ -138,6 +121,7 @@ namespace Grafos
                         else
                         {
                             MessageBox.Show("El Nodo " + ventanaVertice.txtVertice.Text + " ya existe en el grafo ", "Error nuevo Nodo ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            grafo.EliminarVertice(nuevoNodo);
                         }
                     }
                     nuevoNodo = null;
@@ -158,6 +142,12 @@ namespace Grafos
                         Pizarra.ContextMenuStrip = this.CMSCrearVertice;
                 }
             }
+        }
+
+        private void Pizarra_MouseUp(object sender, MouseEventArgs e)
+        {
+            if(e.Button == System.Windows.Forms.MouseButtons.Left)
+                MessageBox.Show("Hola");
         }
     }
 }

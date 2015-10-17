@@ -27,6 +27,11 @@ namespace Grafos
         {
             nodos.Add(nuevonodo);
         }
+        //Elimina un nodo de la lista de nodos del grafo
+        public void EliminarVertice(CVertice nodo)
+        {
+            nodos.Remove(nodo);
+        }
         //Busca un nodo en la lista de nodos del grafo
         public CVertice BuscarVertice(string valor)
         {
@@ -42,7 +47,7 @@ namespace Grafos
                 throw new Exception("El nodo " + origen + " no existe dentro del grafo");
             if ((vnDestino = nodos.Find(v => v.Valor == nDestino)) == null)
                 throw new Exception("El nodo " + nDestino + " no existe dentro del grafo");
-            return AgregarArco(vOrigen, vnDestino);
+            return AgregarArco(vOrigen, vnDestino, peso);
         }
         // Crea la arista a partir de los nodos de origen y de destino
         public bool AgregarArco(CVertice origen, CVertice nDestino, int peso = 1)
