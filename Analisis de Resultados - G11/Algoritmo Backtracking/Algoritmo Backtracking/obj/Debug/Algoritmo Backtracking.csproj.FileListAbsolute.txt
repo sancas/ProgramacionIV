@@ -1,0 +1,9 @@
+E:\Documents\Universidad\ProgramacionIV\Analisis de Resultados - G11\Algoritmo Backtracking\Algoritmo Backtracking\bin\Debug\Algoritmo Backtracking.exe.config
+E:\Documents\Universidad\ProgramacionIV\Analisis de Resultados - G11\Algoritmo Backtracking\Algoritmo Backtracking\bin\Debug\Algoritmo Backtracking.exe
+E:\Documents\Universidad\ProgramacionIV\Analisis de Resultados - G11\Algoritmo Backtracking\Algoritmo Backtracking\bin\Debug\Algoritmo Backtracking.pdb
+E:\Documents\Universidad\ProgramacionIV\Analisis de Resultados - G11\Algoritmo Backtracking\Algoritmo Backtracking\obj\Debug\Algoritmo Backtracking.csprojResolveAssemblyReference.cache
+E:\Documents\Universidad\ProgramacionIV\Analisis de Resultados - G11\Algoritmo Backtracking\Algoritmo Backtracking\obj\Debug\Algoritmo Backtracking.exe
+E:\Documents\Universidad\ProgramacionIV\Analisis de Resultados - G11\Algoritmo Backtracking\Algoritmo Backtracking\obj\Debug\Algoritmo Backtracking.pdb
+J:\Documents\Universidad\ProgramacionIV\Analisis de Resultados - G11\Algoritmo Backtracking\Algoritmo Backtracking\bin\Debug\Algoritmo Backtracking.exe.config
+J:\Documents\Universidad\ProgramacionIV\Analisis de Resultados - G11\Algoritmo Backtracking\Algoritmo Backtracking\obj\Debug\Algoritmo Backtracking.exe
+J:\Documents\Universidad\ProgramacionIV\Analisis de Resultados - G11\Algoritmo Backtracking\Algoritmo Backtracking\obj\Debug\Algoritmo Backtracking.pdb

@@ -37,3 +37,6 @@ E:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G3
 E:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G3\MetodosDeOrdenamiento\MetodosDeOrdenamiento\obj\Debug\MetodosDeOrdenamiento.Form1.resources
 E:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G3\MetodosDeOrdenamiento\MetodosDeOrdenamiento\obj\Debug\MetodosDeOrdenamiento.Properties.Resources.resources
 E:\Documents\Universidad\Progra 4\Cristian Sanchez - Analisis de Resultados - G3\MetodosDeOrdenamiento\MetodosDeOrdenamiento\obj\Debug\MetodosDeOrdenamiento.csproj.GenerateResource.Cache
+J:\Documents\Universidad\ProgramacionIV\Analisis de Resultados - G3\MetodosDeOrdenamiento\MetodosDeOrdenamiento\bin\Debug\MetodosDeOrdenamiento.exe.config
+J:\Documents\Universidad\ProgramacionIV\Analisis de Resultados - G3\MetodosDeOrdenamiento\MetodosDeOrdenamiento\obj\Debug\MetodosDeOrdenamiento.exe
+J:\Documents\Universidad\ProgramacionIV\Analisis de Resultados - G3\MetodosDeOrdenamiento\MetodosDeOrdenamiento\obj\Debug\MetodosDeOrdenamiento.pdb
