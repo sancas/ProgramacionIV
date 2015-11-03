@@ -1,0 +1,12 @@
+El programa crea un nuevo cajero en la clase Form1.cs con las siguiente linea de comandos:
+public Cajero miCajero = new Cajero(new int[] { 5, 2, 1 });
+//Crea un cajero con 5 billetes de $5
+//2 billetes de $10
+//y un billete de $20
+//haciendo un total de $65 dolares en el ATM inicial
+
+Y se crean 4 cuentas automaticamente con los siguientes datos:
+Cuenta 1. No. Tarjeta: 1234, Pin: 1122, Saldo: $1000
+Cuenta 2. No. Tarjeta: 1111, Pin: 3344, Saldo: $10
+Cuenta 3. No. Tarjeta: 2222, Pin: 5566, Saldo: $999
+Cuenta 4. No. Tarjeta: 3333, Pin: 7788, Saldo: $18
