@@ -95,7 +95,7 @@ namespace MetodosDeOrdenamiento
             for (int i = 1; i < arreglo.Length; i++)
             {
                 int temp = arreglo[i];
-                int j = i - 1;
+                int j = i;
 
                 while ((j >= 1) && (arreglo[j] > temp))
                 {
