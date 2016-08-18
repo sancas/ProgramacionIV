@@ -29,17 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.txtPrestamo = new MetroFramework.Controls.MetroTextBox();
-            this.errores = new System.Windows.Forms.ErrorProvider(this.components);
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.txtTasa = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.txtMeses = new MetroFramework.Controls.MetroTextBox();
             this.txtCuota = new MetroFramework.Controls.MetroTextBox();
             this.btnCalcular = new MetroFramework.Controls.MetroButton();
-            ((System.ComponentModel.ISupportInitialize)(this.errores)).BeginInit();
+            this.tasaErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.mesesErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.prestamoErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.tasaErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mesesErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prestamoErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -66,11 +69,7 @@
             this.txtPrestamo.TabIndex = 1;
             this.txtPrestamo.Text = " ";
             this.txtPrestamo.UseStyleColors = true;
-            // 
-            // errores
-            // 
-            this.errores.ContainerControl = this;
-            this.errores.Icon = ((System.Drawing.Icon)(resources.GetObject("errores.Icon")));
+            this.txtPrestamo.Validated += new System.EventHandler(this.txtPrestamo_Validated);
             // 
             // metroLabel2
             // 
@@ -95,6 +94,7 @@
             this.txtTasa.TabIndex = 3;
             this.txtTasa.Text = " ";
             this.txtTasa.UseStyleColors = true;
+            this.txtTasa.Validated += new System.EventHandler(this.txtTasa_Validated);
             // 
             // metroLabel3
             // 
@@ -119,6 +119,7 @@
             this.txtMeses.TabIndex = 5;
             this.txtMeses.Text = " ";
             this.txtMeses.UseStyleColors = true;
+            this.txtMeses.Validated += new System.EventHandler(this.txtMeses_Validated);
             // 
             // txtCuota
             // 
@@ -144,6 +145,21 @@
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
+            // tasaErrorProvider
+            // 
+            this.tasaErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.tasaErrorProvider.ContainerControl = this;
+            // 
+            // mesesErrorProvider
+            // 
+            this.mesesErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.mesesErrorProvider.ContainerControl = this;
+            // 
+            // prestamoErrorProvider
+            // 
+            this.prestamoErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.prestamoErrorProvider.ContainerControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,7 +179,9 @@
             this.Style = MetroFramework.MetroColorStyle.Red;
             this.Text = "Calculadora cuota mensual";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.errores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tasaErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mesesErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prestamoErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,13 +191,15 @@
 
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroTextBox txtPrestamo;
-        private System.Windows.Forms.ErrorProvider errores;
         private MetroFramework.Controls.MetroTextBox txtTasa;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroTextBox txtMeses;
         private MetroFramework.Controls.MetroTextBox txtCuota;
         private MetroFramework.Controls.MetroButton btnCalcular;
+        private System.Windows.Forms.ErrorProvider tasaErrorProvider;
+        private System.Windows.Forms.ErrorProvider mesesErrorProvider;
+        private System.Windows.Forms.ErrorProvider prestamoErrorProvider;
     }
 }
 

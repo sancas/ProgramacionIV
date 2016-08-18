@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using MetroFramework.Forms;
 
 namespace Problema1
@@ -40,16 +41,61 @@ namespace Problema1
             }
             catch (Exception)
             {
-                var texts = Controls.OfType<MetroFramework.Controls.MetroTextBox>();
-                foreach (var text in texts)
-                {
-                    if (string.IsNullOrWhiteSpace(text.Text) && text.Name != "txtCuota")
-                    {
-                        errores.SetError(text, "Por favor llena los campos requeridos");
-                    }
-                    if (text.Text.Contains())
-                }
             }
+        }
+
+        private void txtPrestamo_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPrestamo.Text))
+            {
+                prestamoErrorProvider.SetError(txtPrestamo, "Debe ingresar un valor.");
+            }
+            else if (!isNumber(txtPrestamo.Text))
+            {
+                prestamoErrorProvider.SetError(txtPrestamo, "Solo se admiten numeros.");
+            }
+            else
+            {
+                prestamoErrorProvider.SetError(txtPrestamo, string.Empty);
+            }
+        }
+
+        private void txtTasa_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtTasa.Text))
+            {
+                tasaErrorProvider.SetError(txtTasa, "Debe ingresar un valor.");
+            }
+            else if (!isNumber(txtTasa.Text))
+            {
+                tasaErrorProvider.SetError(txtTasa, "Solo se admiten numeros.");
+            }
+            else
+            {
+                tasaErrorProvider.SetError(txtTasa, string.Empty);
+            }
+        }
+
+        private void txtMeses_Validated(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtMeses.Text))
+            {
+                mesesErrorProvider.SetError(txtMeses, "Debe ingresar un valor.");
+            }
+            else if (!isNumber(txtMeses.Text))
+            {
+                mesesErrorProvider.SetError(txtMeses, "Solo se admiten numeros.");
+            }
+            else
+            {
+                mesesErrorProvider.SetError(txtMeses, string.Empty);
+            }
+        }
+
+        private bool isNumber(string value)
+        {
+            double noNeed = 0;
+            return double.TryParse(value, out noNeed);
         }
     }
 }
