@@ -18,32 +18,6 @@ namespace Problema1
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            txtPrestamo.Text = String.Empty;
-            txtTasa.Text = String.Empty;
-            txtMeses.Text = String.Empty;
-            txtCuota.Text = String.Empty;
-            txtPrestamo.Focus();
-        }
-
-        private void btnCalcular_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                double c, p, i;
-                int n;
-                p = Convert.ToDouble(txtPrestamo.Text);
-                i = Convert.ToDouble(txtTasa.Text);
-                n = Convert.ToInt32(txtMeses.Text);
-                c = p * ((i/100 * Math.Pow(1 + i/100, n)) / ((Math.Pow(1 + i/100, n) - 1)));
-                txtCuota.Text = c.ToString();
-            }
-            catch (Exception)
-            {
-            }
-        }
-
         private void txtPrestamo_Validated(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtPrestamo.Text))
@@ -96,6 +70,34 @@ namespace Problema1
         {
             double noNeed = 0;
             return double.TryParse(value, out noNeed);
+        }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            string validaciones = string.Empty;
+            txtPrestamo.Focus();
+            txtTasa.Focus();
+            txtMeses.Focus();
+            txtCuota.CustomButton.Focus();
+            validaciones += prestamoErrorProvider.GetError(txtPrestamo);
+            validaciones += tasaErrorProvider.GetError(txtTasa);
+            validaciones += mesesErrorProvider.GetError(txtMeses);
+            if (validaciones == string.Empty)
+            {
+                double c, p, i;
+                int n;
+                p = double.Parse(txtPrestamo.Text);
+                i = double.Parse(txtTasa.Text) / 100;
+                n = int.Parse(txtMeses.Text);
+                c = p * ((i * Math.Pow(1 + i, n)) / (Math.Pow(1 + i, n) - 1));
+                txtCuota.Text = Math.Round(c, 2).ToString();
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.txtCuota.CustomButton.Click += new EventHandler(btnCalcular_Click);
+            txtPrestamo.Focus();
         }
     }
 }

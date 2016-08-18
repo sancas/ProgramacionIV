@@ -617,9 +617,9 @@
             this.metroLabel6.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel6.Location = new System.Drawing.Point(262, 200);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(136, 25);
+            this.metroLabel6.Size = new System.Drawing.Size(140, 25);
             this.metroLabel6.TabIndex = 3;
-            this.metroLabel6.Text = "Descuento renta";
+            this.metroLabel6.Text = "Descuento Renta";
             this.metroLabel6.UseStyleColors = true;
             // 
             // metroLabel4

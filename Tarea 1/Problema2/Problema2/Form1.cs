@@ -82,13 +82,14 @@ namespace Problema2
             txtApellidos.Focus();
             txtSalarioBruto.Focus();
             btnCalcular.Focus();
-            validaciones += nombreErrorProvider.GetError(txtNombres);
-            validaciones += apellidoErrorProvider.GetError(txtApellidos);
-            validaciones += salarioBrutoErrorProvider.GetError(txtSalarioBruto);
             if (!rdbtnFemenino.Checked && !rdbtnMasculino.Checked)
             {
                 sexoErrorProvider.SetError(lblSexo, "Debe seleccionar un sexo");
             }
+            validaciones += nombreErrorProvider.GetError(txtNombres);
+            validaciones += apellidoErrorProvider.GetError(txtApellidos);
+            validaciones += salarioBrutoErrorProvider.GetError(txtSalarioBruto);
+            validaciones += sexoErrorProvider.GetError(lblSexo);
             if (validaciones == string.Empty)
             {
                 if (!metroTabControl1.TabPages.Contains(tabDescuentosSalarios))
@@ -130,11 +131,11 @@ namespace Problema2
                 descRenta = salarioBruto * 0.06;
             descAFP = salarioBruto * 0.035;
             salarioLiquido = salarioBruto - descISSS - descAFP - descRenta;
-            txtSalarioB.Text += " " + salarioBruto.ToString();
-            txtDescISSS.Text += " " + descISSS.ToString();
-            txtDescRenta.Text += " " + descRenta.ToString();
-            txtDescAFP.Text += " " + descAFP.ToString();
-            txtSalarioLiquido.Text += " " + salarioLiquido.ToString();
+            txtSalarioB.Text = "$ " + Math.Round(salarioBruto, 2).ToString();
+            txtDescISSS.Text = "$ " + Math.Round(descISSS, 2).ToString();
+            txtDescRenta.Text = "$ " + Math.Round(descRenta, 2).ToString();
+            txtDescAFP.Text = "$ " + Math.Round(descAFP, 2).ToString();
+            txtSalarioLiquido.Text = "$ " + Math.Round(salarioLiquido, 2).ToString();
         }
 
         private void tabInformacionPersonal_Enter(object sender, EventArgs e)
