@@ -1,9 +1,0 @@
-c:\users\usuario\documents\visual studio 2012\Projects\Ejemplo1\Ejemplo1\bin\Debug\Ejemplo1.exe.config
-c:\users\usuario\documents\visual studio 2012\Projects\Ejemplo1\Ejemplo1\bin\Debug\Ejemplo1.exe
-c:\users\usuario\documents\visual studio 2012\Projects\Ejemplo1\Ejemplo1\bin\Debug\Ejemplo1.pdb
-c:\users\usuario\documents\visual studio 2012\Projects\Ejemplo1\Ejemplo1\obj\Debug\Ejemplo1.csprojResolveAssemblyReference.cache
-c:\users\usuario\documents\visual studio 2012\Projects\Ejemplo1\Ejemplo1\obj\Debug\Ejemplo1.Ejemplo1.resources
-c:\users\usuario\documents\visual studio 2012\Projects\Ejemplo1\Ejemplo1\obj\Debug\Ejemplo1.Properties.Resources.resources
-c:\users\usuario\documents\visual studio 2012\Projects\Ejemplo1\Ejemplo1\obj\Debug\Ejemplo1.csproj.GenerateResource.Cache
-c:\users\usuario\documents\visual studio 2012\Projects\Ejemplo1\Ejemplo1\obj\Debug\Ejemplo1.exe
-c:\users\usuario\documents\visual studio 2012\Projects\Ejemplo1\Ejemplo1\obj\Debug\Ejemplo1.pdb

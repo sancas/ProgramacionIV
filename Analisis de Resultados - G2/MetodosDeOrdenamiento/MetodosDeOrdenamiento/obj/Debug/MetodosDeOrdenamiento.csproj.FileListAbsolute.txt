@@ -1,9 +1,0 @@
-c:\users\cristian\documents\visual studio 2013\Projects\MetodosDeOrdenamiento\MetodosDeOrdenamiento\bin\Debug\MetodosDeOrdenamiento.exe.config
-c:\users\cristian\documents\visual studio 2013\Projects\MetodosDeOrdenamiento\MetodosDeOrdenamiento\obj\Debug\MetodosDeOrdenamiento.csprojResolveAssemblyReference.cache
-c:\users\cristian\documents\visual studio 2013\Projects\MetodosDeOrdenamiento\MetodosDeOrdenamiento\obj\Debug\MetodosDeOrdenamiento.Properties.Resources.resources
-c:\users\cristian\documents\visual studio 2013\Projects\MetodosDeOrdenamiento\MetodosDeOrdenamiento\obj\Debug\MetodosDeOrdenamiento.csproj.GenerateResource.Cache
-c:\users\cristian\documents\visual studio 2013\Projects\MetodosDeOrdenamiento\MetodosDeOrdenamiento\bin\Debug\MetodosDeOrdenamiento.exe
-c:\users\cristian\documents\visual studio 2013\Projects\MetodosDeOrdenamiento\MetodosDeOrdenamiento\bin\Debug\MetodosDeOrdenamiento.pdb
-c:\users\cristian\documents\visual studio 2013\Projects\MetodosDeOrdenamiento\MetodosDeOrdenamiento\obj\Debug\MetodosDeOrdenamiento.Form1.resources
-c:\users\cristian\documents\visual studio 2013\Projects\MetodosDeOrdenamiento\MetodosDeOrdenamiento\obj\Debug\MetodosDeOrdenamiento.exe
-c:\users\cristian\documents\visual studio 2013\Projects\MetodosDeOrdenamiento\MetodosDeOrdenamiento\obj\Debug\MetodosDeOrdenamiento.pdb
