@@ -30,20 +30,22 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.TextBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnGenerar = new System.Windows.Forms.Button();
             this.btnOrdenar = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.lblTiempo = new System.Windows.Forms.Label();
             this.cmbMetodos = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.rdbtnDescendente = new System.Windows.Forms.RadioButton();
             this.rdbtnAscendente = new System.Windows.Forms.RadioButton();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listDesordenados = new System.Windows.Forms.ListBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.listOrdenados = new System.Windows.Forms.ListBox();
+            this.txtComplejidad = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -51,28 +53,27 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(15, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 13);
+            this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Insertar numero:";
+            this.label1.Text = "Cantidad numeros:";
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(104, 71);
+            this.txtNumero.Location = new System.Drawing.Point(116, 71);
             this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(100, 20);
+            this.txtNumero.Size = new System.Drawing.Size(88, 20);
             this.txtNumero.TabIndex = 1;
-            this.txtNumero.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
             this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero_KeyPress);
             // 
-            // btnAgregar
+            // btnGenerar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(210, 69);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 2;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.btnGenerar.Location = new System.Drawing.Point(210, 69);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerar.TabIndex = 2;
+            this.btnGenerar.Text = "Generar";
+            this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
             // btnOrdenar
             // 
@@ -84,46 +85,17 @@
             this.btnOrdenar.UseVisualStyleBackColor = true;
             this.btnOrdenar.Click += new System.EventHandler(this.btnOrdenar_Click);
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(15, 96);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(432, 153);
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl1.TabIndex = 4;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.AutoScroll = true;
-            this.tabPage1.Controls.Add(this.lblTiempo);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(424, 127);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Ver Simulacion";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPage1_Paint);
-            // 
-            // lblTiempo
-            // 
-            this.lblTiempo.AutoSize = true;
-            this.lblTiempo.Location = new System.Drawing.Point(274, 111);
-            this.lblTiempo.Name = "lblTiempo";
-            this.lblTiempo.Size = new System.Drawing.Size(144, 13);
-            this.lblTiempo.TabIndex = 0;
-            this.lblTiempo.Text = "Tiempo de ejecucion: 00.00s";
-            this.lblTiempo.Visible = false;
-            // 
             // cmbMetodos
             // 
             this.cmbMetodos.FormattingEnabled = true;
             this.cmbMetodos.Items.AddRange(new object[] {
-            "QuickSort",
+            "BubbleSort",
             "SelectionSort",
-            "InsertionSort"});
+            "InsertionSort",
+            "ShellSort",
+            "MergeSort",
+            "QuickSort",
+            "HeapSort"});
             this.cmbMetodos.Location = new System.Drawing.Point(326, 31);
             this.cmbMetodos.Name = "cmbMetodos";
             this.cmbMetodos.Size = new System.Drawing.Size(121, 21);
@@ -181,29 +153,76 @@
             this.rdbtnAscendente.Text = "Ascendente";
             this.rdbtnAscendente.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.listDesordenados);
+            this.groupBox1.Location = new System.Drawing.Point(15, 114);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(175, 177);
+            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Lista desordenada";
+            // 
+            // listDesordenados
+            // 
+            this.listDesordenados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listDesordenados.FormattingEnabled = true;
+            this.listDesordenados.Location = new System.Drawing.Point(3, 16);
+            this.listDesordenados.Name = "listDesordenados";
+            this.listDesordenados.Size = new System.Drawing.Size(169, 158);
+            this.listDesordenados.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.listOrdenados);
+            this.groupBox2.Location = new System.Drawing.Point(272, 114);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(175, 177);
+            this.groupBox2.TabIndex = 21;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Lista ordenada";
+            // 
+            // listOrdenados
+            // 
+            this.listOrdenados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listOrdenados.FormattingEnabled = true;
+            this.listOrdenados.Location = new System.Drawing.Point(3, 16);
+            this.listOrdenados.Name = "listOrdenados";
+            this.listOrdenados.Size = new System.Drawing.Size(169, 158);
+            this.listOrdenados.TabIndex = 0;
+            // 
+            // txtComplejidad
+            // 
+            this.txtComplejidad.Location = new System.Drawing.Point(15, 301);
+            this.txtComplejidad.Name = "txtComplejidad";
+            this.txtComplejidad.ReadOnly = true;
+            this.txtComplejidad.Size = new System.Drawing.Size(432, 20);
+            this.txtComplejidad.TabIndex = 23;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 261);
+            this.ClientSize = new System.Drawing.Size(458, 326);
+            this.Controls.Add(this.txtComplejidad);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbMetodos);
-            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnOrdenar);
-            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Metodos de ordenamientos";
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,17 +232,19 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNumero;
-        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnGenerar;
         private System.Windows.Forms.Button btnOrdenar;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.ComboBox cmbMetodos;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblTiempo;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RadioButton rdbtnDescendente;
         private System.Windows.Forms.RadioButton rdbtnAscendente;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ListBox listDesordenados;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ListBox listOrdenados;
+        private System.Windows.Forms.TextBox txtComplejidad;
     }
 }
 

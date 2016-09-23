@@ -50,6 +50,7 @@
     <Compile Include="Form1.designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HeapSorter.cs" />
     <Compile Include="Numeros.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

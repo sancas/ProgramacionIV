@@ -14,59 +14,17 @@ namespace MetodosDeOrdenamiento
 {
     public partial class Form1 : Form
     {
-        bool estado = false;
-        bool limpiar = false;
         int[] Arreglo_numeros;
-        Button[] Arreglo;
-        Numeros Datos = new Numeros();
+        int cantidadNumeros;
+        string Complejidad;
 
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (cmbMetodos.SelectedIndex == -1)
-                {
-                    MessageBox.Show("Seleccione un metodo de ordenamiento", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else
-                {
-                    int num;
-                    Random myRandom = new Random();
-                    if (txtNumero.Text == String.Empty)
-                    {
-                        num = myRandom.Next(1, 99);
-                        Datos.insertar_Dato(num);
-                    }
-                    else
-                    {
-                        num = Convert.ToInt32(txtNumero.Text);
-                        if (num > 99)
-                        {
-                            MessageBox.Show("Se recomienda ingresar solamente numeros de 2 digitos", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        Datos.insertar_Dato(num);
-                    }
-                    Arreglo_numeros = Datos.Obtener_Arreglo();
-                    Arreglo = Datos.Arreglo_Botones();
-                }
-            }
-            catch
-            {
-                MessageBox.Show("No se admiten numeros tan grandes", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            estado = true;
-            tabPage1.Refresh();
-            estado = false;
-            limpiar = false;
-        }
-
         //Metodo de ordenamiento QuickSort
-        public void QuickSort(ref int[] arreglo, int primero, int ultimo, ref Button[] Arreglo_Numeros)
+        public void QuickSort(ref int[] arreglo, int primero, int ultimo)
         {
             int i, j, central;
             double pivote;
@@ -92,7 +50,6 @@ namespace MetodosDeOrdenamiento
                     temp = arreglo[i];
                     arreglo[i] = arreglo[j];
                     arreglo[j] = temp;
-                    intercambio(ref Arreglo_Numeros, j, i);
                     i++;
                     j--;
                 }
@@ -100,19 +57,19 @@ namespace MetodosDeOrdenamiento
             while (i <= j);
             if (primero < j)
             {
-                QuickSort(ref arreglo, primero, j, ref Arreglo_Numeros);
+                QuickSort(ref arreglo, primero, j);
             }
             if (i < ultimo)
             {
-                QuickSort(ref arreglo, i, ultimo, ref Arreglo_Numeros);
+                QuickSort(ref arreglo, i, ultimo);
             }
         }
 
         //Metodo de Ordenamiento por Seleccion
-        public void SelectionSort(ref int[] arreglo, ref Button[] Arreglo_Numeros)
+        public void SelectionSort(ref int[] arreglo)
         {
             int pos_min, temp;
-            for (int i = 1; i < arreglo.Length - 1; i++)
+            for (int i = 0; i < arreglo.Length - 1; i++)
             {
                 pos_min = i;
 
@@ -138,34 +95,54 @@ namespace MetodosDeOrdenamiento
                     temp = arreglo[i];
                     arreglo[i] = arreglo[pos_min];
                     arreglo[pos_min] = temp;
-                    intercambio(ref Arreglo_Numeros, pos_min, i);
+                }
+            }
+        }
+
+        //Metodo de Ordenamiento Burbuja
+        public void BubbleSort(ref int[] arreglo)
+        {
+            for (int i = 0; i < arreglo.Length; i++)
+            {
+                for (int j = 0; j < arreglo.Length - 1; j++)
+                {
+                    if (arreglo[j] > arreglo[j + 1] && rdbtnAscendente.Checked)
+                    {
+                        int aux = arreglo[j];
+                        arreglo[j] = arreglo[j + 1];
+                        arreglo[j + 1] = aux;
+                    }
+                    else if (arreglo[j] < arreglo[j + 1] && rdbtnDescendente.Checked)
+                    {
+                        int aux = arreglo[j];
+                        arreglo[j] = arreglo[j + 1];
+                        arreglo[j + 1] = aux;
+                    }
                 }
             }
         }
 
         //Metodo de Ordenamiento por Insercion
-        public void InsertionSort(ref int[] arreglo, ref Button[] Arreglo_Numeros)
+        public void InsertionSort(ref int[] arreglo)
         {
-            for (int i = 1; i < arreglo.Length; i++)
+            for (int i = 0; i < arreglo.Length; i++)
             {
                 int temp = arreglo[i];
                 int j = i - 1;
 
                 if (rdbtnAscendente.Checked)
                 {
-                    while ((j >= 1) && (arreglo[j] > temp))
+                    while ((j >= 0) && (arreglo[j] > temp))
                     {
                         arreglo[j + 1] = arreglo[j];
-                        intercambio(ref Arreglo_Numeros, j + 1, j);
                         j--;
                     }
                 }
                 else if (rdbtnDescendente.Checked)
                 {
-                    while ((j >= 1) && (arreglo[j] < temp))
+                    while ((j >= 0) && (arreglo[j] < temp))
                     {
                         arreglo[j + 1] = arreglo[j];
-                        intercambio(ref Arreglo_Numeros, j + 1, j);
                         j--;
                     }
                 }
@@ -174,118 +151,147 @@ namespace MetodosDeOrdenamiento
             }
         }
 
-        private void tabPage1_Paint(object sender, PaintEventArgs e)
+        //Metodo ordenamiento por ShellSort
+        public void ShellSort(ref int[] arreglo)
         {
-            if (estado)
+            int j, inc;
+            inc = arreglo.Length / 2;
+            while (inc >= 1)
             {
-                Point xy = new Point(30, 35);
-
-                try
+                for (int i = inc; i < arreglo.Length; i++)
                 {
-                    Dibujar_Arreglo(ref Arreglo, xy, ref tabPage1);
+                    int v = arreglo[i];
+                    j = i - inc;
+                    if (rdbtnAscendente.Checked)
+                    {
+                        while (j >= 0 && arreglo[j] > v)
+                        {
+                            arreglo[j + inc] = arreglo[j];
+                            j = j - inc;
+                        }
+                        arreglo[j + inc] = v;
+                    }
+                    else
+                    {
+                        while (j >= 0 && arreglo[j] < v)
+                        {
+                            arreglo[j + inc] = arreglo[j];
+                            j = j - inc;
+                        }
+                        arreglo[j + inc] = v;
+                    }
                 }
-                catch
+                inc = inc / 2;
+            }
+        }
+
+        //Metodo de Ordenamiento de MergeSort
+        public void MergeSort(ref int[] input, int left, int right)
+        {
+            if (left < right)
+            {
+                int middle = (left + right) / 2;
+
+                MergeSort(ref input, left, middle);
+                MergeSort(ref input, middle + 1, right);
+
+                //Merge
+                int[] leftArray = new int[middle - left + 1];
+                int[] rightArray = new int[right - middle];
+
+                Array.Copy(input, left, leftArray, 0, middle - left + 1);
+                Array.Copy(input, middle + 1, rightArray, 0, right - middle);
+
+                int i = 0;
+                int j = 0;
+                for (int k = left; k < right + 1; k++)
                 {
+                    if (i == leftArray.Length)
+                    {
+                        input[k] = rightArray[j];
+                        j++;
+                    }
+                    else if (j == rightArray.Length)
+                    {
+                        input[k] = leftArray[i];
+                        i++;
+                    }
+                    else if (leftArray[i] <= rightArray[j] && rdbtnAscendente.Checked)
+                    {
+                        input[k] = leftArray[i];
+                        i++;
+                    }
+                    else if (leftArray[i] >= rightArray[j] && rdbtnDescendente.Checked)
+                    {
+                        input[k] = leftArray[i];
+                        i++;
+                    }
+                    else
+                    {
+                        input[k] = rightArray[j];
+                        j++;
+                    }
                 }
             }
         }
 
-        public void Dibujar_Arreglo(ref Button[] Arreglo, Point xy, ref TabPage tp1)
+        //Metodo de Ordenamiento de HeapSort
+        public void HeapSort()
         {
-            for (int i = 1; i < Arreglo.Length; i++)
-            {
-                Arreglo[i].Location = xy;
-                if (limpiar)
-                    tp1.Controls.Remove(Arreglo[i]);
-                else
-                    tp1.Controls.Add(Arreglo[i]);               
-                xy += new Size(40, 0);
-            }
+            HeapSorter miHeap = new HeapSorter(ref Arreglo_numeros, rdbtnAscendente.Checked);
+            miHeap.sortArray();
         }
 
         private void btnOrdenar_Click(object sender, EventArgs e)
         {
-            Stopwatch miReloj = new Stopwatch();
-            miReloj.Restart();
-            this.Cursor = Cursors.WaitCursor;
-            btnOrdenar.Enabled = false;
-            btnAgregar.Enabled = false;
-            cmbMetodos.Enabled = false;
-
-            if (cmbMetodos.SelectedIndex != -1)
+            if (cmbMetodos.SelectedIndex != -1 && Arreglo_numeros != null)
             {
-                if (cmbMetodos.SelectedItem.ToString() == "QuickSort")
-                    QuickSort(ref Arreglo_numeros, 1, Arreglo_numeros.Length - 1, ref Arreglo);
+                if (cmbMetodos.SelectedItem.ToString() == "BubbleSort")
+                {
+                    BubbleSort(ref Arreglo_numeros);
+                    Complejidad = "La complejidad para este ejemplo de BubbleSort es: " + Math.Pow(cantidadNumeros, 2).ToString();
+                }
                 else if (cmbMetodos.SelectedItem.ToString() == "SelectionSort")
-                    SelectionSort(ref Arreglo_numeros, ref Arreglo);
+                {
+                    SelectionSort(ref Arreglo_numeros);
+                    Complejidad = "La complejidad para este ejemplo de SelectionSort es: " + Math.Pow(cantidadNumeros, 2).ToString();
+                }
                 else if (cmbMetodos.SelectedItem.ToString() == "InsertionSort")
-                    InsertionSort(ref Arreglo_numeros, ref Arreglo);
+                {
+                    InsertionSort(ref Arreglo_numeros);
+                    Complejidad = "La complejidad para este ejemplo de InsertionSort es: " + Math.Pow(cantidadNumeros, 2).ToString();
+                }
+                else if (cmbMetodos.SelectedItem.ToString() == "ShellSort")
+                {
+                    ShellSort(ref Arreglo_numeros);
+                    Complejidad = "La complejidad para este ejemplo de ShellSort es: " + Math.Pow(Math.Log10(cantidadNumeros), 2).ToString();
+                }
+                else if (cmbMetodos.SelectedItem.ToString() == "MergeSort")
+                {
+                    MergeSort(ref Arreglo_numeros, 0, Arreglo_numeros.Length - 1);
+                    Complejidad = "La complejidad para este ejemplo de MergeSort es: " + (cantidadNumeros * Math.Log10(cantidadNumeros)).ToString();
+                }
+                else if (cmbMetodos.SelectedItem.ToString() == "QuickSort")
+                {
+                    QuickSort(ref Arreglo_numeros, 0, Arreglo_numeros.Length - 1);
+                    Complejidad = "La complejidad para este ejemplo de QuickSort es: " + Math.Pow(cantidadNumeros, 2).ToString();
+                }
+                else if (cmbMetodos.SelectedItem.ToString() == "HeapSort")
+                {
+                    HeapSort();
+                    Complejidad = "La complejidad para este ejemplo de HeapSort es: " + (cantidadNumeros * Math.Log10(cantidadNumeros)).ToString();
+                }
+                for (int x = 0; x < cantidadNumeros; x++)
+                {
+                    listOrdenados.Items.Add(Arreglo_numeros[x]);
+                }
+                txtComplejidad.Text = Complejidad;
+                btnOrdenar.Enabled = false;
             }
+            else if (Arreglo_numeros == null)
+                MessageBox.Show("Debe generar una lista de numeros primero", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
                 MessageBox.Show("Seleccione un metodo de ordenamiento", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            this.Cursor = Cursors.Default;
-            btnOrdenar.Enabled = true;
-            btnAgregar.Enabled = true;
-            cmbMetodos.Enabled = true;
-            miReloj.Stop();
-            lblTiempo.Text = "Tiempo de ejecucion: " + miReloj.Elapsed.TotalSeconds.ToString().Substring(0, 4) + "s";
-            lblTiempo.Visible = true;
-        }
-
-        public void intercambio(ref Button[] boton, int a, int b)
-        {
-            string temp = boton[a].Text;
-
-            Point pa = boton[a].Location;
-            Point pb = boton[b].Location;
-            int diferencia = pa.X - pb.X;
-            int x = 10;
-            int y = 10;
-            int t = 70;
-
-            while (y != 40)
-            {
-                Thread.Sleep(t);
-                boton[a].Location += new Size(0, 10);
-                boton[b].Location += new Size(0, -10);
-                y += 10;
-            }
-
-            while (x != diferencia + 10)
-            {
-                Thread.Sleep(t);
-                boton[a].Location += new Size(-10, 0);
-                boton[b].Location += new Size(10, 0);
-                x += 10;
-            }
-
-            y = 0;
-
-            while(y != -30)
-            {
-                Thread.Sleep(t);
-                boton[a].Location += new Size(0, -10);
-                boton[b].Location += new Size(0, +10);
-                y -= 10;
-            }
-
-            boton[a].Text = boton[b].Text;
-            boton[b].Text = temp;
-            boton[b].Location = pb;
-            boton[a].Location = pa;
-            estado = true;
-            tabPage1.Refresh();
-        }
-
-        private void btnLimpiar_Click(object sender, EventArgs e)
-        {
-            Datos.limpiar_Datos();
-            limpiar = true;
-            estado = true;
-            tabPage1.Refresh();
-            Arreglo_numeros = Datos.Obtener_Arreglo();
-            Arreglo = Datos.Arreglo_Botones();
-            limpiar = false;
         }
 
         private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
@@ -298,31 +304,35 @@ namespace MetodosDeOrdenamiento
             }
         }
 
-        private void txtNumero_TextChanged(object sender, EventArgs e)
+        private void btnGenerar_Click(object sender, EventArgs e)
         {
-            if (txtNumero.Text != String.Empty)
+            if (txtNumero.Text != string.Empty)
             {
-                try
+                Random miRandom = new Random();
+                cantidadNumeros = int.Parse(txtNumero.Text);
+                Arreglo_numeros = new int[cantidadNumeros];
+                for (int x = 0; x < cantidadNumeros; x++)
                 {
-                    int num;
-                    num = Convert.ToInt32(txtNumero.Text);
-                    if (num > 99)
-                    {
-                        txtNumero.BackColor = Color.Orange;
-                    }
-                    else
-                    {
-                        txtNumero.BackColor = Color.Green;
-                    }
+                    Arreglo_numeros[x] = miRandom.Next(-99, 99);
+                    listDesordenados.Items.Add(Arreglo_numeros[x]);
                 }
-                catch
-                {
-                    MessageBox.Show("No se admiten numeros tan grandes", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtNumero.BackColor = Color.Red;
-                }
+                btnGenerar.Enabled = false;
             }
             else
-                txtNumero.BackColor = Color.Green;
+                MessageBox.Show("Debe ingresar una cantidad de numeros.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);                
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Arreglo_numeros = null;
+            listOrdenados.Items.Clear();
+            listDesordenados.Items.Clear();
+            cmbMetodos.SelectedIndex = -1;
+            btnGenerar.Enabled = true;
+            btnOrdenar.Enabled = true;
+            txtComplejidad.Text = string.Empty;
+            txtNumero.Text = string.Empty;
+            txtNumero.Focus();
         }
     }
 }
