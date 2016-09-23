@@ -64,3 +64,16 @@ J:\Documents\Universidad\ProgramacionIV\Investigacion Complementaria - G10\Grafo
 J:\Documents\Universidad\ProgramacionIV\Investigacion Complementaria - G10\Grafos\Grafos\obj\Debug\Grafos.Properties.Resources.resources
 J:\Documents\Universidad\ProgramacionIV\Investigacion Complementaria - G10\Grafos\Grafos\obj\Debug\Grafos.Vertice.resources
 J:\Documents\Universidad\ProgramacionIV\Investigacion Complementaria - G10\Grafos\Grafos\obj\Debug\Grafos.csproj.GenerateResource.Cache
+I:\Documents\Universidad\ProgramacionIV\Investigacion Complementaria - G10\Grafos\Grafos\bin\Debug\Grafos.exe.config
+I:\Documents\Universidad\ProgramacionIV\Investigacion Complementaria - G10\Grafos\Grafos\obj\Debug\Grafos.exe
+I:\Documents\Universidad\ProgramacionIV\Investigacion Complementaria - G10\Grafos\Grafos\obj\Debug\Grafos.pdb
+I:\Documents\Universidad\ProgramacionIV\Investigacion Complementaria - G10\Grafos\Grafos\bin\Debug\Grafos.exe
+I:\Documents\Universidad\ProgramacionIV\Investigacion Complementaria - G10\Grafos\Grafos\bin\Debug\Grafos.pdb
+I:\Documents\Universidad\ProgramacionIV\Investigacion Complementaria - G10\Grafos\Grafos\obj\Debug\Grafos.csprojResolveAssemblyReference.cache
+I:\Documents\Universidad\ProgramacionIV\Investigacion Complementaria - G10\Grafos\Grafos\obj\Debug\Grafos.Arco.resources
+I:\Documents\Universidad\ProgramacionIV\Investigacion Complementaria - G10\Grafos\Grafos\obj\Debug\Grafos.Simulador.resources
+I:\Documents\Universidad\ProgramacionIV\Investigacion Complementaria - G10\Grafos\Grafos\obj\Debug\Grafos.NodoDijkstra.resources
+I:\Documents\Universidad\ProgramacionIV\Investigacion Complementaria - G10\Grafos\Grafos\obj\Debug\Grafos.NodoFloydWarshall.resources
+I:\Documents\Universidad\ProgramacionIV\Investigacion Complementaria - G10\Grafos\Grafos\obj\Debug\Grafos.Properties.Resources.resources
+I:\Documents\Universidad\ProgramacionIV\Investigacion Complementaria - G10\Grafos\Grafos\obj\Debug\Grafos.Vertice.resources
+I:\Documents\Universidad\ProgramacionIV\Investigacion Complementaria - G10\Grafos\Grafos\obj\Debug\Grafos.csproj.GenerateResource.Cache

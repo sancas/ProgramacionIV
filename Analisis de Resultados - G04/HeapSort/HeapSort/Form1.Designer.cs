@@ -125,10 +125,10 @@
             // tabControlSimulacion
             // 
             this.tabControlSimulacion.Controls.Add(this.tabSimulacion);
-            this.tabControlSimulacion.Location = new System.Drawing.Point(84, 106);
+            this.tabControlSimulacion.Location = new System.Drawing.Point(12, 58);
             this.tabControlSimulacion.Name = "tabControlSimulacion";
             this.tabControlSimulacion.SelectedIndex = 0;
-            this.tabControlSimulacion.Size = new System.Drawing.Size(1008, 577);
+            this.tabControlSimulacion.Size = new System.Drawing.Size(987, 577);
             this.tabControlSimulacion.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControlSimulacion.TabIndex = 17;
             // 
@@ -138,7 +138,7 @@
             this.tabSimulacion.Location = new System.Drawing.Point(4, 22);
             this.tabSimulacion.Name = "tabSimulacion";
             this.tabSimulacion.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSimulacion.Size = new System.Drawing.Size(1000, 551);
+            this.tabSimulacion.Size = new System.Drawing.Size(979, 551);
             this.tabSimulacion.TabIndex = 0;
             this.tabSimulacion.Text = "Ver Simulacion";
             this.tabSimulacion.UseVisualStyleBackColor = true;
@@ -157,7 +157,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 658);
+            this.ClientSize = new System.Drawing.Size(1008, 639);
             this.Controls.Add(this.tabControlSimulacion);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnLimpiar);
