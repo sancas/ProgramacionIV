@@ -6,8 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks; // Librería agregada, para el manejo de hilos de ejecución
 
-namespace Grafos {
-    class CVertice {
+namespace Grafo 
+{
+    class CVertice 
+    {
         // Atributos
         public string Valor; // Valor que almacena (representa) el nodo
         public List < CArco > ListaAdyacencia; // Lista de adyacencia del nodo
@@ -129,7 +131,8 @@ namespace Grafos {
             posicion.Dispose();
             return retval;
         }
-        public override string ToString() {
+
+        public string ToString() {
             return this.Valor;
         }
     }

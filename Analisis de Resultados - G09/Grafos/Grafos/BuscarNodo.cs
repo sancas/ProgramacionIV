@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace Grafos
 {
-    public partial class Arco : Form
+    public partial class BuscarNodo : Form
     {
         public bool control; // variable de control
-        public string dato; // el dato que almacenará el arco
+        public string dato; // el dato que almacenará el vértice
 
-        public Arco()
+        public BuscarNodo()
         {
             InitializeComponent();
             control = false;
@@ -24,7 +24,7 @@ namespace Grafos
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            string valor = txtArco.Text.Trim();
+            string valor = txtVertice.Text.Trim();
             if ((valor == "") || (valor == " "))
             {
                 MessageBox.Show("Debes ingresar un valor", "Error", MessageBoxButtons.OK,
@@ -43,36 +43,28 @@ namespace Grafos
             Hide();
         }
 
-        private void Arco_Load(object sender, EventArgs e)
+        private void BuscarNodo_Load(object sender, EventArgs e)
         {
-            txtArco.Focus();
+            txtVertice.Focus();
         }
 
-        private void Arco_FormClosing(object sender, FormClosingEventArgs e)
+        private void BuscarNodo_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Hide();
             e.Cancel = true;
         }
 
-        private void Arco_Shown(object sender, EventArgs e)
+        private void BuscarNodo_Shown(object sender, EventArgs e)
         {
-            txtArco.Clear();
-            txtArco.Focus(); 
+            txtVertice.Clear();
+            txtVertice.Focus();
         }
 
-        private void txtArco_KeyDown(object sender, KeyEventArgs e)
+        private void txtVertice_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 btnAceptar_Click(null, null);
-            }
-        }
-
-        private void txtArco_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
             }
         }
     }

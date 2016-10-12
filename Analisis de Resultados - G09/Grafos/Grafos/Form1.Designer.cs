@@ -33,6 +33,7 @@
             this.Pizarra = new System.Windows.Forms.Panel();
             this.CMSCrearVertice = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.nuevoVerticeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSearchNode = new System.Windows.Forms.Button();
             this.CMSCrearVertice.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,11 +74,22 @@
             this.nuevoVerticeToolStripMenuItem.Text = "Nuevo Vertice";
             this.nuevoVerticeToolStripMenuItem.Click += new System.EventHandler(this.nuevoVerticeToolStripMenuItem_Click);
             // 
+            // btnSearchNode
+            // 
+            this.btnSearchNode.Location = new System.Drawing.Point(632, 31);
+            this.btnSearchNode.Name = "btnSearchNode";
+            this.btnSearchNode.Size = new System.Drawing.Size(75, 23);
+            this.btnSearchNode.TabIndex = 2;
+            this.btnSearchNode.Text = "Buscar nodo";
+            this.btnSearchNode.UseVisualStyleBackColor = true;
+            this.btnSearchNode.Click += new System.EventHandler(this.btnSearchNode_Click);
+            // 
             // Simulador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(719, 485);
+            this.Controls.Add(this.btnSearchNode);
             this.Controls.Add(this.Pizarra);
             this.Controls.Add(this.label1);
             this.Name = "Simulador";
@@ -94,6 +106,7 @@
         private System.Windows.Forms.Panel Pizarra;
         private System.Windows.Forms.ContextMenuStrip CMSCrearVertice;
         private System.Windows.Forms.ToolStripMenuItem nuevoVerticeToolStripMenuItem;
+        private System.Windows.Forms.Button btnSearchNode;
     }
 }
 

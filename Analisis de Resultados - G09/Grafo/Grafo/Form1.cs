@@ -1,17 +1,19 @@
 ﻿using System;
+using MetroFramework;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
+using System.Drawing.Drawing2D;
 
-namespace Grafos
+namespace Grafo
 {
-    public partial class Simulador : Form
+    public partial class Simulador : MetroForm
     {
         private CGrafo grafo; // instanciamos la clase CGrafo
         private CVertice nuevoNodo; // instanciamos la clase CVertice
@@ -27,6 +29,7 @@ namespace Grafos
         public Simulador()
         {
             InitializeComponent();
+            this.StyleManager = SimuladorStyleManager;
             grafo = new CGrafo();
             nuevoNodo = null;
             var_control = 0;
@@ -46,7 +49,7 @@ namespace Grafos
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MetroMessageBox.Show(this, ex.Message);
             }
         }
 
@@ -60,7 +63,30 @@ namespace Grafos
             nuevoNodo = new CVertice();
             var_control = 2; // recordemos que es usado para indicar el estado en la pizarra: 0 ->
             // sin accion, 1 -> Dibujando arco, 2 -> Nuevo vértice
+        }
 
+        private void Pizarra_MouseUp(object sender, MouseEventArgs e)
+        {
+            switch (var_control)
+            {
+                case 1: // Dibujando arco
+                    ventanaArco.Visible = false;
+                    ventanaArco.control = false;
+                    if ((NodoDestino = grafo.DetectarPunto(e.Location)) != null && NodoOrigen != NodoDestino)
+                    {
+                        ventanaArco.ShowDialog();
+                        if (ventanaArco.control)
+                        {
+                            int distancia = int.Parse(ventanaArco.txtArco.Text);
+                            grafo.AgregarArco(NodoOrigen, NodoDestino, distancia);
+                        }
+                    }
+                    var_control = 0;
+                    NodoOrigen = null;
+                    NodoDestino = null;
+                    Pizarra.Refresh();
+                    break;
+            }
         }
 
         private void Pizarra_MouseMove(object sender, MouseEventArgs e)
@@ -122,7 +148,7 @@ namespace Grafos
                         }
                         else
                         {
-                            MessageBox.Show("El Nodo " + ventanaVertice.txtVertice.Text + " ya existe en el grafo ", "Error nuevo Nodo ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MetroMessageBox.Show(this, "El Nodo " + ventanaVertice.txtVertice.Text + " ya existe en el grafo ", "Error nuevo Nodo ", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             grafo.EliminarVertice(nuevoNodo);
                         }
                     }
@@ -146,31 +172,7 @@ namespace Grafos
             }
         }
 
-        private void Pizarra_MouseUp(object sender, MouseEventArgs e)
-        {
-            switch (var_control)
-            {
-                case 1: // Dibujando arco
-                    ventanaArco.Visible = false;
-                    ventanaArco.control = false;
-                    if ((NodoDestino = grafo.DetectarPunto(e.Location)) != null && NodoOrigen != NodoDestino)
-                    {
-                        ventanaArco.ShowDialog();
-                        if (ventanaArco.control)
-                        {
-                            int distancia = int.Parse(ventanaArco.txtArco.Text);
-                            grafo.AgregarArco(NodoOrigen, NodoDestino, distancia);
-                        }
-                    }
-                    var_control = 0;
-                    NodoOrigen = null;
-                    NodoDestino = null;
-                    Pizarra.Refresh();
-                    break;
-            }
-        }
-
-        private void btnSearchNode_Click(object sender, EventArgs e)
+        private void buscarNodoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ventanaBuscarNodo.Visible = false;
             ventanaBuscarNodo.control = false;
@@ -178,9 +180,9 @@ namespace Grafos
             if (ventanaBuscarNodo.control)
             {
                 if (grafo.BuscarVertice(ventanaBuscarNodo.txtVertice.Text) != null)
-                    MessageBox.Show("El nodo existe");
+                    MetroMessageBox.Show(this, "El nodo ya existe");
                 else
-                    MessageBox.Show("El nodo no existe");
+                    MetroMessageBox.Show(this, "El nodo no existe");
             }
         }
     }

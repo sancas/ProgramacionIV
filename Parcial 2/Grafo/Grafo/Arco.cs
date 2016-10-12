@@ -1,4 +1,5 @@
 ﻿using System;
+using MetroFramework;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,10 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
-namespace Grafos
+namespace Grafo
 {
-    public partial class Arco : Form
+    public partial class Arco : MetroForm
     {
         public bool control; // variable de control
         public string dato; // el dato que almacenará el arco
@@ -18,6 +20,7 @@ namespace Grafos
         public Arco()
         {
             InitializeComponent();
+            this.StyleManager = ArcoStyleManager;
             control = false;
             dato = " ";
         }

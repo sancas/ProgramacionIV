@@ -6,11 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks; // Librería agregada, para el manejo de hilos de ejecución
 
-namespace Grafos {
-    class CVertice {
+namespace Grafo 
+{
+    [Serializable]
+    class CVertice 
+    {
         // Atributos
         public string Valor; // Valor que almacena (representa) el nodo
         public List < CArco > ListaAdyacencia; // Lista de adyacencia del nodo
+        public Boolean Visitado;//variable que sirve para marcar como visto el nodo en un recorrido
         Dictionary < string, short > _banderas;
         Dictionary < string, short > _banderas_predeterminado;
         // Propiedades
@@ -64,6 +68,7 @@ namespace Grafos {
             this.Color = Color.Green; // Definimos el color del nodo
             this.Dimensiones = new Size(size, size); // Definimos las dimensiones del circulo
             this.FontColor = Color.White; // Color de la fuente
+            this.Visitado = false;
         }
         public CVertice(): this("") {} // Constructor por defecto
 
@@ -129,6 +134,7 @@ namespace Grafos {
             posicion.Dispose();
             return retval;
         }
+
         public override string ToString() {
             return this.Valor;
         }

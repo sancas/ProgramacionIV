@@ -43,7 +43,7 @@ namespace Arbol_Binario
         //Funcion para insertar un nodo en el Arbol Binario
         public Nodo_Arbol Insertar(int x, Nodo_Arbol t, int Level)
         {
-            if (t == null)
+            if (t == null) //Si no hay nodo raiz
             {
                 t = new Nodo_Arbol(x, null, null, null);
                 t.nivel = Level;
@@ -53,12 +53,12 @@ namespace Arbol_Binario
                 Level++;
                 t.Izquierdo = Insertar(x, t.Izquierdo, Level);
             }
-            else if(x > t.info)
+            else if(x > t.info) //Sino si el valor es menor que la raiz
             {
                 Level++;
                 t.Derecho = Insertar(x, t.Derecho, Level);
             }
-            else
+            else //Sino el dato ya existe en el arbol
             {
                 MessageBox.Show("Dato Existente en el Arbol", "Error de ingreso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }

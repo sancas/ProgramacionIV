@@ -1,4 +1,5 @@
 ﻿using System;
+using MetroFramework;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,24 +8,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
-namespace Grafos
+namespace Grafo
 {
-    public partial class Arco : Form
+    public partial class BuscarNodo : MetroForm
     {
         public bool control; // variable de control
-        public string dato; // el dato que almacenará el arco
+        public string dato; // el dato que almacenará el vértice
 
-        public Arco()
+        public BuscarNodo()
         {
             InitializeComponent();
+            this.StyleManager = BuscarNodoStyleManager;
             control = false;
             dato = " ";
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            string valor = txtArco.Text.Trim();
+            string valor = txtVertice.Text.Trim();
             if ((valor == "") || (valor == " "))
             {
                 MessageBox.Show("Debes ingresar un valor", "Error", MessageBoxButtons.OK,
@@ -43,24 +46,24 @@ namespace Grafos
             Hide();
         }
 
-        private void Arco_Load(object sender, EventArgs e)
+        private void BuscarNodo_Load(object sender, EventArgs e)
         {
-            txtArco.Focus();
+            txtVertice.Focus();
         }
 
-        private void Arco_FormClosing(object sender, FormClosingEventArgs e)
+        private void BuscarNodo_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Hide();
             e.Cancel = true;
         }
 
-        private void Arco_Shown(object sender, EventArgs e)
+        private void BuscarNodo_Shown(object sender, EventArgs e)
         {
-            txtArco.Clear();
-            txtArco.Focus(); 
+            txtVertice.Clear();
+            txtVertice.Focus();
         }
 
-        private void txtArco_KeyDown(object sender, KeyEventArgs e)
+        private void txtVertice_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -68,7 +71,7 @@ namespace Grafos
             }
         }
 
-        private void txtArco_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtVertice_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {

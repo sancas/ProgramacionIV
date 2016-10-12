@@ -84,6 +84,7 @@
             this.txtArco.Size = new System.Drawing.Size(152, 20);
             this.txtArco.TabIndex = 4;
             this.txtArco.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtArco_KeyDown);
+            this.txtArco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtArco_KeyPress);
             // 
             // Arco
             // 

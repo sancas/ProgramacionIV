@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -116,37 +116,37 @@ namespace Arbol_Binario
     Pen Lapiz, Nodo_Arbol Raiz, bool post, bool inor, bool preor)
         {
             Brush entorno = Brushes.Red;
-            if (inor == true)
+            if (inor == true) //Si es recorrido en orden
             {
-                if (Raiz != null)
+                if (Raiz != null) //Si la raiz no es null
                 {
-                    colorear(grafo, fuente, Relleno, RellenoFuente, Lapiz, Raiz.Izquierdo, post, inor, preor);
-                    Raiz.colorear(grafo, fuente, entorno, RellenoFuente, Lapiz);
+                    colorear(grafo, fuente, Relleno, RellenoFuente, Lapiz, Raiz.Izquierdo, post, inor, preor); //Se colorea el nodo izquiero
+                    Raiz.colorear(grafo, fuente, entorno, RellenoFuente, Lapiz); //Se colorea la raiz
                     Thread.Sleep(1000); // pausar la ejecución 1000 milisegundos
-                    Raiz.colorear(grafo, fuente, Relleno, RellenoFuente, Lapiz);
-                    colorear(grafo, fuente, Relleno, RellenoFuente, Lapiz, Raiz.Derecho, post, inor, preor);
+                    Raiz.colorear(grafo, fuente, Relleno, RellenoFuente, Lapiz); //Se vuelve a colorear la raiz
+                    colorear(grafo, fuente, Relleno, RellenoFuente, Lapiz, Raiz.Derecho, post, inor, preor); //Se colorea el nodo derecho
                 }
             }
-            else if (preor == true)
+            else if (preor == true) //Si es recorrido pre orden
             {
-                if (Raiz != null)
+                if (Raiz != null) //Si la raiz no es null
                 {
-                    Raiz.colorear(grafo, fuente, entorno, RellenoFuente, Lapiz);
+                    Raiz.colorear(grafo, fuente, entorno, RellenoFuente, Lapiz); //Se colorea la raiz
                     Thread.Sleep(1000); // pausar la ejecución 1000 milisegundos
-                    Raiz.colorear(grafo, fuente, Relleno, RellenoFuente, Lapiz);
-                    colorear(grafo, fuente, Relleno, RellenoFuente, Lapiz, Raiz.Izquierdo, post, inor, preor);
-                    colorear(grafo, fuente, Relleno, RellenoFuente, Lapiz, Raiz.Derecho, post, inor, preor);
+                    Raiz.colorear(grafo, fuente, Relleno, RellenoFuente, Lapiz); //Se colorea la raiz 
+                    colorear(grafo, fuente, Relleno, RellenoFuente, Lapiz, Raiz.Izquierdo, post, inor, preor); //Se colorea el nodo izquierdo
+                    colorear(grafo, fuente, Relleno, RellenoFuente, Lapiz, Raiz.Derecho, post, inor, preor); //Se colorea el nodo derecho
                 }
             }
-            else if (post == true)
+            else if (post == true) //Si es recorrido post orden
             {
-                if (Raiz != null)
+                if (Raiz != null) //Si la raiz no es null
                 {
-                    colorear(grafo, fuente, Relleno, RellenoFuente, Lapiz, Raiz.Izquierdo, post, inor, preor);
-                    colorear(grafo, fuente, Relleno, RellenoFuente, Lapiz, Raiz.Derecho, post, inor, preor);
-                    Raiz.colorear(grafo, fuente, entorno, RellenoFuente, Lapiz);
+                    colorear(grafo, fuente, Relleno, RellenoFuente, Lapiz, Raiz.Izquierdo, post, inor, preor); //Se colorea el nodo izquiero
+                    colorear(grafo, fuente, Relleno, RellenoFuente, Lapiz, Raiz.Derecho, post, inor, preor); //Se colorea el nodo derecho
+                    Raiz.colorear(grafo, fuente, entorno, RellenoFuente, Lapiz); //Se colorea la raiz
                     Thread.Sleep(1000); // pausar la ejecución 1000 milisegundos
-                    Raiz.colorear(grafo, fuente, Relleno, RellenoFuente, Lapiz);
+                    Raiz.colorear(grafo, fuente, Relleno, RellenoFuente, Lapiz); //Se colorea la raiz
                 }
             }
         }
@@ -158,11 +158,11 @@ namespace Arbol_Binario
             Nodo_Arbol actual = Raiz;
             Brush entorno = Brushes.Red;
 
-            while (actual != null)
+            while (actual != null) //Mientras el nodo actual no sea null
             {
-                if (x == actual.info)
+                if (x == actual.info) //Si el valor del nodo raiz es igual al actual
                 {
-                    actual.colorear(grafo, fuente, entorno, RellenoFuente, Lapiz);
+                    actual.colorear(grafo, fuente, entorno, RellenoFuente, Lapiz); //Se resalta el nodo coloreandolo
                     break;
                 }
                 else if (x < actual.info) actual = actual.Izquierdo;
@@ -176,18 +176,18 @@ namespace Arbol_Binario
             Nodo_Arbol actual = Raiz;
             Brush entorno = Brushes.Red;
 
-            while (actual != null)
+            while (actual != null) //Mientras el nodo actual no sea null
             {
-                int diferenciaX = Referencia.X - actual.nodo.X;
-                int diferenciaY = Referencia.Y - actual.nodo.Y;
+                int diferenciaX = Referencia.X - actual.nodo.X; //Diferencia en X entre el puntero y el nodo actual
+                int diferenciaY = Referencia.Y - actual.nodo.Y; //Diferencia en Y entre el puntero y el nodo actual
 
-                if (diferenciaX > 0 && diferenciaX < 30 && diferenciaY > 0 && diferenciaY < 30)
+                if (diferenciaX > 0 && diferenciaX < 30 && diferenciaY > 0 && diferenciaY < 30) //0>x<30 y 0>y<30 Si el puntero esta a 30 px maximo del nodo
                 {
-                    actual.colorear(grafo, fuente, entorno, RellenoFuente, Lapiz);
-                    return actual.info;
+                    actual.colorear(grafo, fuente, entorno, RellenoFuente, Lapiz); //Se colorea el nodo actual
+                    return actual.info; //Se regresa el valor del nodo
                 }
-                else if (diferenciaX > 0) actual = actual.Derecho;
-                else if (diferenciaX < 0) actual = actual.Izquierdo;
+                else if (diferenciaX > 0) actual = actual.Derecho; //Si la diferencia en 'x' es mayor a 0 actual es el nodo derecho
+                else if (diferenciaX < 0) actual = actual.Izquierdo; //Si la difrencia en 'x' es menor a 0 actual es el nodo izquierdo
             }
             return 100;
         }
